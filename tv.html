@@ -1,0 +1,326 @@
+﻿
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>电视台</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		<style type="text/css">
+			
+			.jianbian{ 
+				
+				//width:100%; 
+				
+				//height:635px; 
+				
+				//background:#D2E9FF;
+							
+			} 
+			body{
+				font-family: "微软雅黑";
+				/*margin: 60px 100px;
+				background: Azure;*/
+				margin: 0 0;
+			}
+			div.u{
+				float: left;
+				width: 180px;
+				height: 100px; 
+				border: 1px solid royalblue; 
+				margin-left: 15px;
+				margin-top: 10px;
+				cursor: pointer;
+				
+				-moz-border-radius: 5px; 
+    			-webkit-border-radius: 5px; 
+    			border-radius:5px;  
+			}
+			div.u:hover{
+				background: #46A3FF;
+				color:#FFFFFF;
+			}
+				
+			div.w{
+				text-align: center;
+				margin: 0 auto;
+				//border: 1px solid red;
+				margin-top: 26px;
+				font-family: "微软雅黑";
+				font-size: 32px;
+			}
+			input.k{
+				height: 32px;
+				width: 300px;
+				font-family: "微软雅黑";
+				font-size: 16px;
+				-moz-border-radius: 5px; 
+    			-webkit-border-radius: 5px; 
+    			border-radius:5px;
+			}
+			input.b{
+				height: 36px;
+				width: 100px;
+				font-family: "微软雅黑";
+    			font-size: 16px;
+    			background: white;
+				-moz-border-radius: 5px; 
+    			-webkit-border-radius: 5px; 
+    			border-radius:5px;
+    			
+    			
+			}
+			
+		</style>
+		<script type="text/javascript">
+		
+			$=function(ID){return document.getElementById(ID);};
+			//去重  
+			String.prototype.trim=function(){return this.replace(/(^\s*)|(\s*$)/g, "");}; 
+			//判断是否为空  
+			notNull=function(o){return o!=null&&o.trim()!="";};  
+
+			
+			function openWeb(u){
+				window.open(u);
+//				window.location.href=u;
+			}
+			
+			var channel_id="";
+			
+			function focusInputText(e){
+				var ev= window.event||e;
+				
+				var active_id = document.activeElement.id;
+				
+				
+				//alert(ev.keyCode);//up-38 down-40 left37 right39
+				if(!notNull(channel_id)){
+					channel_id="11";					
+				}else{
+					if($(channel_id)){
+						var co = $(channel_id);
+						//alert(co);
+						co.style.background="#FFFFFF";
+						co.style.color="#000000";
+					}
+				}
+				//alert(channel_id);
+								
+				if(ev.keyCode==38){//up
+					
+				}else if(ev.keyCode==40){//down
+				
+				}else if(ev.keyCode==37){//left
+					channel_id=(parseInt(channel_id)-1)+"";
+				}else if(ev.keyCode==39){//right
+					channel_id=(parseInt(channel_id)+1)+"";
+				}
+				if($(channel_id)){
+					var co = $(channel_id);
+					//alert(co);
+					co.style.background="#46A3FF";
+					co.style.color="#FFFFFF";
+				}
+				
+				
+				
+			}
+			
+		</script>
+	</head>
+	<!-- onkeyup="focusInputText(event)" -->
+	<body class="jianbian">
+		
+		<div style="margin-top:30px;margin-left: 50px;margin-bottom: 50px;">
+			<table>
+				 <tr><td>
+				 		<div class="u" align="center" onclick="openWeb('http://tv.cctv.com/live/cctv1/')">
+							<div class="w">CCTV-1</div>
+						</div>
+						<div class="u" align="center" onclick="openWeb('http://tv.cctv.com/live/cctv2/')">
+							<div class="w">CCTV-2</div>
+						</div>
+						<div class="u" align="center" onclick="openWeb('http://tv.cctv.com/live/cctv3/')">
+							<div class="w">CCTV-3</div>
+						</div>
+						<div class="u" align="center" onclick="openWeb('http://tv.cctv.com/live/cctv4/')">
+							<div class="w">CCTV-4</div>
+						</div>
+						<div class="u" align="center" onclick="openWeb('http://tv.cctv.com/live/cctv5/')">
+							<div class="w">CCTV-5</div>
+						</div>
+						<div class="u" align="center" onclick="openWeb('http://tv.cctv.com/live/cctv5plus/')">
+							<div class="w">CCTV-5+</div>
+						</div>
+						<div class="u" align="center" onclick="openWeb('http://tv.cctv.com/live/cctv6/')">
+							<div class="w">CCTV-6</div>
+						</div>
+						<div class="u" align="center" onclick="openWeb('http://tv.cctv.com/live/cctv7/')">
+							<div class="w">CCTV-7</div>
+						</div>
+						<div class="u" align="center" onclick="openWeb('http://tv.cctv.com/live/cctv8/')">
+							<div class="w">CCTV-8</div>
+						</div>
+						<div class="u" align="center" onclick="openWeb('http://tv.cctv.com/live/cctvjilu/')">
+							<div class="w">CCTV-9</div>
+						</div>
+						<div class="u" align="center" onclick="openWeb('http://tv.cctv.com/live/cctv10/')">
+							<div class="w">CCTV-10</div>
+						</div>
+						<div class="u" align="center" onclick="openWeb('http://tv.cctv.com/live/cctv11/')">
+							<div class="w">CCTV-11</div>
+						</div>
+						<div class="u" align="center" onclick="openWeb('http://tv.cctv.com/live/cctv12/')">
+							<div class="w">CCTV-12</div>
+						</div>
+						<div class="u" align="center" onclick="openWeb('http://tv.cctv.com/live/cctv13/')">
+							<div class="w">CCTV-13</div>
+						</div>
+						<div class="u" align="center" onclick="openWeb('http://tv.cctv.com/live/cctvchild/')">
+							<div class="w">CCTV-14</div>
+						</div>
+						<div class="u" align="center" onclick="openWeb('http://tv.cctv.com/live/cctv11/')">
+							<div class="w">CCTV-15</div>
+						</div>
+						
+						
+				 </td></tr>
+				 <tr><td>
+				 		<div class="u" align="center"  onclick="openWeb('http://v.iqilu.com/live/sdtv/')">
+							<div class="w">山东卫视</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://v.iqilu.com/live/qlpd/')">
+							<div class="w">齐鲁频道</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://v.iqilu.com/live/typd/')">
+							<div class="w">体育频道</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://v.iqilu.com/live/typd/')">
+							<div class="w">生活频道</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://v.iqilu.com/live/zypd/')">
+							<div class="w">综艺频道</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://v.iqilu.com/live/nkpd/')">
+							<div class="w">农科频道</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://v.iqilu.com/live/ggpd/')">
+							<div class="w">公共频道</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://v.iqilu.com/live/yspd/')">
+							<div class="w">影视频道</div>
+						</div>
+						
+				 </td></tr>
+				 <tr><td>
+				 		<div class="u" align="center"  onclick="openWeb('http://tv.cntv.cn/live/anhui/')">
+							<div class="w">安徽卫视</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://tv.cntv.cn/live/btv1/')">
+							<div class="w">北京卫视</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://tv.cntv.cn/live/bingtuan/')">
+							<div class="w">兵团卫视</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://tv.cntv.cn/live/chongqing/')">
+							<div class="w">重庆卫视</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://tv.cntv.cn/live/dongfang/')">
+							<div class="w">东方卫视</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://tv.cntv.cn/live/dongnan/')">
+							<div class="w">东南卫视</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://tv.cntv.cn/live/guangdong/')">
+							<div class="w">广东卫视</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://tv.cntv.cn/live/guangxi/')">
+							<div class="w">广西卫视</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://tv.cntv.cn/live/gansu/')">
+							<div class="w">甘肃卫视</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://tv.cntv.cn/live/guizhou/')">
+							<div class="w">贵州卫视</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://tv.cntv.cn/live/hebei/')">
+							<div class="w">河北卫视</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://tv.cntv.cn/live/henan/')">
+							<div class="w">河南卫视</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://tv.cntv.cn/live/heilongjiang/')">
+							<div class="w">黑龙江卫视</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://tv.cntv.cn/live/hubei/')">
+							<div class="w">湖北卫视</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://tv.cntv.cn/live/jilin/')">
+							<div class="w">吉林卫视</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://tv.cntv.cn/live/jiangxi/')">
+							<div class="w">江西卫视</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://tv.cntv.cn/live/liaoning/')">
+							<div class="w">辽宁卫视</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://tv.cntv.cn/live/travel/')">
+							<div class="w">旅游卫视</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://tv.cntv.cn/live/neimenggu/')">
+							<div class="w">内蒙古卫视</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://tv.cntv.cn/live/ningxia/')">
+							<div class="w">宁夏卫视</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://tv.cntv.cn/live/qinghai/')">
+							<div class="w">青海卫视</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://tv.cntv.cn/live/shandong/')">
+							<div class="w">山东卫视</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://tv.cntv.cn/live/shenzhen/')">
+							<div class="w">深圳卫视</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://tv.cntv.cn/live/shan3xi/')">
+							<div class="w">陕西卫视</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://tv.cntv.cn/live/shan1xi/')">
+							<div class="w">山西卫视</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://tv.cntv.cn/live/sichuan/')">
+							<div class="w">四川卫视</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://tv.cntv.cn/live/tianjin/')">
+							<div class="w">天津卫视</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://tv.cntv.cn/live/xizang/')">
+							<div class="w">西藏卫视</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://tv.cntv.cn/live/xiamen/')">
+							<div class="w">厦门卫视</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://tv.cntv.cn/live/xinjiang/')">
+							<div class="w">新疆卫视</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://tv.cntv.cn/live/xianggangweishi/')">
+							<div class="w">香港卫视</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://tv.cntv.cn/live/yanbian/')">
+							<div class="w">延边卫视</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://tv.cntv.cn/live/yunnan/')">
+							<div class="w">云南卫视</div>
+						</div>
+						<div class="u" align="center"  onclick="openWeb('http://tv.cntv.cn/live/hnss/')">
+							<div class="w">三沙卫视</div>
+						</div>
+						
+				 </td></tr>
+				 
+			</table>
+			
+		</div>
+		
+	</body>
+</html>
